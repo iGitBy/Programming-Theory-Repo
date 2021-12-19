@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5023898479184474287}
   - component: {fileID: 5023898479184474280}
   - component: {fileID: 5023898479184474281}
-  - component: {fileID: 5023898479184474284}
+  - component: {fileID: 9027141026705363811}
   m_Layer: 0
   m_Name: Animal_Bird
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5023898479184474282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 0.08}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &5023898479184474284
+--- !u!114 &9027141026705363811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,9 +122,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5023898479184474282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960c7093ce3d14bc99842cb16d02d59e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1febbc34bc0c84bde8315b41a3396e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speakText: {fileID: 0}
   jumpForce: 50
   groundSpeed: 26
   airSpeed: 80
