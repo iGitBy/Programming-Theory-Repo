@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lion : Animal //__________INHERITANCE__________
                            //This child class inherits functionality from parent class "Animal"
 {
-    [SerializeField] private GameObject mainCamera;
+    private GameObject mainCamera;
 
     private void Awake()
     {

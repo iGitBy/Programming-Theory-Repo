@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Animal : MonoBehaviour //__________INHERITANCE__________
                                     //Animal inherits functionality from MonoBehaviour. 
                                     //Animal's child classes of Bird, Elephant, Frog, and Lion will inherit functionality from
-                                    //Animal, which in turn inherits from MonoBehaviour. So, if Animal is parent
+                                    //Animal, which inherits from MonoBehaviour. So, if Animal is parent
                                     //to Lion then MonoBehaviour is... grandparent to Lion :)
 {
 
@@ -65,7 +65,7 @@ public class Animal : MonoBehaviour //__________INHERITANCE__________
     {
 
         Jump();//__________ABSTRACTION__________
-        //methods like this abstract more complex code blocks
+        //methods like this abstract/simplify more complex code blocks
 
 
         if (Input.GetKeyDown(KeyCode.Space) && readyToSpeak)

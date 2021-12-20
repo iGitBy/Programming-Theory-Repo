@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TitleUI : MonoBehaviour
 {
-   public void ChooseAnimal(int choice)
+    public void ChooseAnimal(int choice)
     {
         SelectionManager.Instance.SelectAnimal(choice);
         SelectionManager.Instance.GoToMainScene();
