@@ -3,14 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Animal : MonoBehaviour
+public class Animal : MonoBehaviour //__________INHERITANCE__________
+                                    //Animal inherits functionality from MonoBehaviour. 
+                                    //Animal's child classes of Bird, Elephant, Frog, and Lion will inherit functionality from
+                                    //Animal, which in turn inherits from MonoBehaviour. So, if Animal is parent
+                                    //to Lion then MonoBehaviour is... grandparent to Lion :)
 {
 
     private Rigidbody animalRigidbody;
 
     private Text speakText;
 
-    protected string animalNoise;
+    private float maxSpeakTextLength = 20;
+
+
+    //__________ENCAPSULATION__________
+    private string m_AnimalNoise; //private backing field
+    public string AnimalNoise //public property with setter validation
+    {
+        get { return m_AnimalNoise; }
+
+        set
+        {
+            if (value.Length > maxSpeakTextLength)
+            {
+                Debug.LogError("Animal noise can't be more than 10 characters long!");
+            }
+            else
+            {
+                m_AnimalNoise = value;
+            }
+        }
+    }
 
 
     [SerializeField] private float jumpForce;
@@ -20,10 +44,10 @@ public class Animal : MonoBehaviour
     [SerializeField] private float airDrag;
 
 
-    [SerializeField] private bool isGrounded;
+
+    private bool isGrounded;
     private bool readyToSpeak;
     protected bool canFly;
-
 
 
 
@@ -39,9 +63,16 @@ public class Animal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Jump();
-        Speak();
-   
+
+        Jump();//__________ABSTRACTION__________
+        //methods like this abstract more complex code blocks
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && readyToSpeak)
+        {
+            Speak();
+        }
+
     }
 
     private void FixedUpdate()
@@ -50,19 +81,16 @@ public class Animal : MonoBehaviour
     }
 
 
-
-    public virtual void Speak()
+    //__________POLYMORPHISM__________
+    public virtual void Speak() // virtual methods like these pave the way for overrides in child classes
     {
-        if (Input.GetKeyDown(KeyCode.R) && readyToSpeak)
-        {
-            StartCoroutine(PrepareSpeak());
-        }
+        StartCoroutine(PrepareSpeak());
     }
 
     IEnumerator PrepareSpeak()
     {
         readyToSpeak = false;
-        speakText.text = animalNoise;
+        speakText.text = m_AnimalNoise;
         speakText.gameObject.SetActive(true);
         yield return new WaitForSeconds(3);
         readyToSpeak = true;

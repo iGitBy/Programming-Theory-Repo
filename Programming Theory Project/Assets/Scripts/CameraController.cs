@@ -25,10 +25,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShakeEffect();
-        }
 
         if (shaking)
         {
@@ -67,7 +63,7 @@ public class CameraController : MonoBehaviour
 
     }
 
-    void ShakeEffect()
+    public void ShakeEffect()
     {
         shaking = true;
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5023898479184474287}
   - component: {fileID: 5023898479184474280}
   - component: {fileID: 5023898479184474281}
-  - component: {fileID: 5023898479184474284}
+  - component: {fileID: 3634453256873822703}
   m_Layer: 0
   m_Name: Animal_Frog
   m_TagString: Untagged
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &5023898479184474284
+--- !u!114 &3634453256873822703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5023898479184474282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960c7093ce3d14bc99842cb16d02d59e, type: 3}
+  m_Script: {fileID: 11500000, guid: ac60327064a754f0488f80f1f84a06e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 6

@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : Animal //INHERITANCE
+public class Bird : Animal //__________INHERITANCE__________
+    //This child class inherits functionality from parent class "Animal"
 {
 
     private void Awake()
     {
         canFly = true;
-        animalNoise = "SQUAAAK!";
+        AnimalNoise = "SQUAAAK!";
     }
     
 }
